@@ -267,7 +267,7 @@ footer {
     Intro section              
 -----------------------------------------*/
 #intro {
-    background: url('../images/f1.jpg') 50% 0 repeat fixed;
+    background: url('../images/f1.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;

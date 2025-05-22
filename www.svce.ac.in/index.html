@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<title>STEP - 2021</title>
+<title>STEP - 2026</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <meta charset="UTF-8">
@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-sVL1D6jKf6kV+OGW3cRYCUj6MX6TV00ZQ5U9GPFBJeYT6MQnE7RRtFP8x/tEmcZ3q0iXRxkgl1ZTuJP3B3Fxbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <link rel="stylesheet" href="css/owl.theme.css">
 <link rel="stylesheet" href="css/owl.carousel.css">
 
@@ -22,7 +25,424 @@
 <!-- Google Font -->
 <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
 
-<link rel="icon" href="./images/title.svg" type="image/icon type">
+<link rel="icon" href="images/title.png" type="image">
+<style>    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+	  max-height: 120px;
+      background-color: #111;
+      color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+	  padding-top: 10px;
+      padding-left: 20px;
+	  padding-right: 20px;
+    }
+
+    .col-1 img {
+      height: 60px;
+    }
+
+    .col-2 {
+      flex: 1;
+      text-align: center;
+      padding: 0 10px;
+	  color: white;
+    }
+
+    .col-2 p {
+      font-size: 1em;
+      line-height: 1;
+	  color: white;
+    }
+
+    .col-2 .title {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .col-3 {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hamburger {
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    .aicte-logo {
+      height: 60px;
+      margin-left: 10px;
+    }
+
+    .header-main nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+      background-color: #111;
+      flex-direction: column;
+    }
+
+    .header-main nav ul.show {
+      max-height: 500px; /* Enough height for dropdown */
+    }
+
+    nav ul li {
+      padding: 0px 20px;
+      text-align: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00BFFF;
+    }
+
+    .new {
+      font-size: 0.8em;
+      color: #ff5e5e;
+    }
+
+    /* Desktop Only */
+    @media (min-width: 769px) {
+      .hamburger {
+        display: none;
+      }
+
+      .header-main nav ul {
+        display: flex !important;
+        flex-direction: row;
+        max-height: none;
+      }
+
+      nav ul li {
+        padding: 10px 15px;
+      }
+
+      .aicte-logo {
+        display: inline-block;
+      }
+    }
+
+    /* Mobile Only */
+    @media (max-width: 768px) {
+      .col-2 p {
+        font-size: 0.75em;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .aicte-logo {
+        display: none;
+      }
+    }
+
+.home-section {
+  margin-top: 110px; /* space below fixed header */
+  background-image: url(images/f1.jpg);
+  height: calc(100vh - 110px); /* Viewport height minus header */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive box on top of bg */
+.inner-home {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.marquee-links {
+  margin: 30px 0;
+  font-size: 1.3vw;
+  white-space: nowrap;
+}
+
+.marquee-links a {
+color: rgb(29, 68, 158);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 4px solid orange;
+  padding: 5px 10px;
+  margin-right: 15px; /* spacing between links */
+  display: inline-block; /* ensures padding and border work properly */
+  border-radius: 5px; /* optional rounded corners */
+}
+
+
+.home-content h3,
+.home-content h2,
+.home-content h1 {
+  margin: 10px 0;
+  
+}
+
+.home-content h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.home-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.home-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #00BFFF;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+@media (max-width: 768px) {
+
+  .inner-home {
+	color: #333;
+    margin: 0 20px;
+    padding: 20px 15px;
+    z-index: 3;
+  }
+
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.2rem;
+  }
+  .home-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .marquee-links {
+    display: none;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.overview-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.overview-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.overview-text {
+  flex: 1 1 500px;
+}
+
+.overview-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.overview-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.overview-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.overview-image img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* === Responsive Fix === */
+@media (max-width: 768px) {
+  .overview-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .overview-text {
+    padding: 0 10px;
+  }
+
+  .overview-text h2 {
+    font-size: 2rem;
+  }
+  .overview-image img {
+  max-width: 100%;
+  height: auto;
+}
+}
+
+.PS {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f0f2f5;
+}
+
+.domain-block {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.domain-block:hover {
+  transform: translateY(-5px);
+}
+
+.domain-title {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+  border-left: 5px solid #0077b6;
+  padding-left: 0.5rem;
+}
+
+.subtopic {
+  margin-bottom: 1.2rem;
+}
+
+.subtopic h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+.subtopic ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+  margin: 0;
+}
+
+.subtopic ul li {
+  margin-bottom: 0.3rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .PS {
+    padding: 1rem;
+  }
+
+  .domain-title {
+    font-size: 1.3rem;
+  }
+
+  .subtopic h3 {
+    font-size: 1rem;
+  }
+
+  .subtopic ul li {
+    font-size: 0.9rem;
+  }
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.social-icons li a .icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons li a:hover .icon {
+  transform: scale(1.2);
+}
+
+
+</style>
 
 
 </head>
@@ -37,14 +457,13 @@
 
 </div>
 
-
 <!-- =========================
      NAVIGATION LINKS     
 ============================== -->
-<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+<!-- <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
 	<div class="container-lg">
 
-		<!-- navbar header -->
+
 
 
 		<div class="navbar-header">
@@ -74,15 +493,14 @@
 				<li><a href="#venue" class="smoothScroll">About us</a></li>
 				<li><a href="#contact_1" class="smoothScroll">Contact</a></li>
 			</ul>
-			<!-- <a href="#intro" class="navbar-brand"> <img class="logo logo-1" src="./images/Aicte_logo-svce.png" alt="" > </a> -->
 		</div>
 		
 	</div>
 </div>
 
-<!-- =========================
+ =========================
     INTRO SECTION   
-============================== -->
+============================== 
 <section id="intro" class="parallax-section">
 	<div class="container">
 		<div class="row">
@@ -110,27 +528,108 @@
 
 		</div>
 	</div>
+</section> -->
+
+
+<header>
+  <div class="header-top">
+    <!-- Column 1: SVCE Logo -->
+    <div class="col-1">
+      <img src="images/svce-logo.png" alt="SVCE Logo" />
+    </div>
+
+    <!-- Column 2: College Info -->
+    <div class="col-2">
+      <p class="title">SRI VENKATESWARA COLLEGE OF ENGINEERING</p>
+      <p>AN AUTONOMOUS INSTITUTION - AFFILIATED TO ANNA UNIVERSITY</p>
+      <p>PENNALUR, SRIPERUMBUDUR TK - 602 117</p>
+    </div>
+
+    <!-- Column 3: Hamburger + AICTE -->
+    <div class="col-3">
+      <img class="aicte-logo" src="images/AICTE-logo.png" alt="AICTE Logo" />
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <nav>
+      <ul id="navLinks">
+        <li><a href="#intro">HOME</a></li>
+        <li><a href="#video">CALL FOR PAPER</a></li>
+        <li><a href="#author">AUTHOR GUIDELINES</a></li>
+        <li><a href="#jp">JOURNAL PUBLICATION <span class="new">NEW</span></a></li>
+        <li><a href="#program">COMMITTEE</a></li>
+        <li><a href="#venue">ABOUT US</a></li>
+        <li><a href="#contact_1">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section id="home" class="home-section">
+
+    <div class="inner-home">
+  <marquee class="marquee-links">
+    <a href="./images/step 2021 new.pdf">STEP-2026 BROCHURE</a>
+    <a href="#jp">Journal Publication <sup>New</sup></a>
+    <a href="STEP 2021_Inaugural Invitation and Agenda.pdf">Inaugural Function Invitation</a>
+  </marquee>
+
+  <div class="home-content">
+    <h3>DEPARTMENT OF INFORMATION TECHNOLOGY</h3>
+    <h3>DEPARTMENT OF ELECTRICAL & ELECTRONICS ENGINEERING</h3>
+    <h1>AICTE Sponsored International E-Conference</h1>
+    <h2>SUSTAINABLE AND EFFICIENT ENERGY SOLUTIONS</h2>
+    <h1>STEP-2026</h1>
+
+    <div class="home-buttons">
+      <a href="#overview" class="btn">LEARN MORE</a>
+      <a href="#contact" class="btn btn-danger">REGISTER NOW</a>
+      <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.svce.ac.in%2Fstep2021%2Fimages%2Fpaper-format.docx&wdOrigin=BROWSELINK" target="_blank" class="btn">PAPER FORMAT</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfc4UXQvTxYntEW3cEbtbVZxTa4sKLmE5d1tPxA68MbtmqI0A/viewform?usp=header" target="_blank" class="btn">Register & Payment Proof</a>
+    </div>
+  </div>
+
+  <marquee class="marquee-links bottom-marquee">
+    <a href="final Program Schedule.pdf">Programme Schedule</a>
+    <a href="STEP 2021_Valedictory Invitation and Agenda.pdf">Valedictory Function Invitation</a>
+  </marquee>
+  </div>
 </section>
 
 
 <!-- =========================
     OVERVIEW SECTION   
 ============================== -->
-<section id="overview" class="parallax-section">
+<!-- <section id="overview" class="parallax-section">
 	<div class="container">
 		<div class="row">
 
-			<div class="wow fadeInUp col-md-6 col-sm-6 tanush" data-wow-delay="0.6s">
-				<h3>Smart Technologies in Electric vehicles and Power grid </h3>
-				<p>The International Conference on Smart Technologies in Electric Vehicles and Power Grid aims to provide a common platform across the industrial experts, academicians & researchers to share their knowledge and innovative research ideas in the emerging areas of Electric vehicle and Smart grid. This conference leads to the establishment of industry institute interaction in developing innovative applications and to improve the curriculum development process and quality of teaching.</p>
+			<div class="wow fadeInUp col-md-6 tanush" data-wow-delay="0.6s">
+				<h3>Sustainable and Efficient Energy Solutions </h3>
+				<p> The International Conference on Sustainable and Efficient Energy Solutions brings together industry experts, academicians, and researchers to share innovative ideas in sustainable energy and efficiency. It aims to foster collaboration between industry and academia for the development of practical, eco-friendly energy solutions. The conference also contributes to improving academic curricula and teaching quality, promoting research and innovation in the fields of clean energy, energy management, and environmental sustainability.</p>
 			</div>
 					
 			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
-				<img src="./images/Electriccar.svg" class="img-responsive" alt="Overview">
+				<img src="./images/Sustainable solution.png" class="img-responsive" style="position: relative;margin-top: 0; scale: 0.6;" alt="Overview">
 			</div>
 
 		</div>
 	</div>
+</section> -->
+
+<section id="overview" class="overview-section">
+  <div class="overview-container">
+    <div class="overview-text">
+      <h2>Sustainable and Efficient Energy Solutions</h2>
+      <p>
+        The International Conference on Sustainable and Efficient Energy Solutions brings together industry experts, academicians, and researchers to share innovative ideas in sustainable energy and efficiency. It aims to foster collaboration between industry and academia for the development of practical, eco-friendly energy solutions. The conference also contributes to improving academic curricula and teaching quality, promoting research and innovation in the fields of clean energy, energy management, and environmental sustainability.
+      </p>
+    </div>
+    <div class="overview-image">
+      <img src="images/Sustainable solution.png" alt="Overview" />
+    </div>
+  </div>
 </section>
 
 
@@ -142,7 +641,7 @@
 		<div class="row">
 
 			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="0.9s">
-				<img src="./images/Books.svg" class="img-responsive" alt="Overview">
+				<img src="./images/Books.svg" alt="Overview">
 			</div>
 
 			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.3s">
@@ -152,9 +651,344 @@
 					
 		</div>
 
-		</div>
 	</div>
-	<div class="program-divider col-md-12 col-sm-12"></div>
+
+	<div class="PS">
+  <div class="domain-block">
+    <h2 class="domain-title">Power Generation and Integration</h2>
+    
+    <div class="subtopic">
+      <h3>Smart Grid Technologies</h3>
+      <ul>
+        <li>Real-time energy monitoring and control</li>
+        <li>Integration of distributed energy resources (DERs)</li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h3>Renewable Energy Integration</h3>
+      <ul>
+        <li>Grid-tied solar PV systems</li>
+        <li>Wind energy systems and power quality management</li>
+        <li>Hybrid renewable systems (solar-wind-diesel-battery)</li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h3>Microgrids</h3>
+      <ul>
+        <li>Design and optimization of microgrids</li>
+        <li>Islanding detection and control strategies</li>
+        <li>Peer-to-peer energy trading within microgrids</li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h3>Energy Harvesting Systems</h3>
+      <ul>
+        <li>Piezoelectric, thermoelectric, and RF energy harvesting</li>
+        <li>Power management circuits for low energy systems</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="domain-block">
+    <h2 class="domain-title">Energy Storage and Conversion</h2>
+    
+    <div class="subtopic">
+      <h3>Battery Energy Storage Systems (BESS)</h3>
+      <ul>
+        <li>Battery management systems (BMS)</li>
+        <li>Grid-level applications of lithium-ion and flow batteries</li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h3>Supercapacitors and Ultracapacitors</h3>
+      <ul>
+        <li>Fast-charging energy storage for grid and transportation</li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h3>Power Electronics for Renewable Energy</h3>
+      <ul>
+        <li>Efficient inverters for solar and wind systems</li>
+        <li>Multilevel converters for grid integration</li>
+      </ul>
+    </div>
+
+    <div class="subtopic">
+      <h3>Electric Vehicle Charging Infrastructure</h3>
+      <ul>
+        <li>Smart and fast-charging systems</li>
+        <li>Vehicle-to-grid (V2G) technologies</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="domain-block">
+  <h2 class="domain-title">Energy Efficiency and Demand Management</h2>
+
+  <div class="subtopic">
+    <h3>Energy-Efficient Motor Drives</h3>
+    <ul>
+      <li>Variable frequency drives (VFDs)</li>
+      <li>High-efficiency BLDC and PMSM motors</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Demand Side Management (DSM)</h3>
+    <ul>
+      <li>Load forecasting and peak load shaving</li>
+      <li>Home energy management systems (HEMS)</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Building Automation and Smart Homes</h3>
+    <ul>
+      <li>IoT-based energy monitoring systems</li>
+      <li>Intelligent HVAC and lighting control</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Power Quality Improvement</h3>
+    <ul>
+      <li>Harmonic mitigation techniques</li>
+      <li>Use of FACTS devices for efficient energy flow</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block">
+  <h2 class="domain-title">Emerging Technologies and Innovations</h2>
+
+  <div class="subtopic">
+    <h3>Wireless Power Transfer (WPT)</h3>
+    <ul>
+      <li>Inductive and resonant WPT for EVs and IoT devices</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>AI and Machine Learning in Energy Systems</h3>
+    <ul>
+      <li>Predictive maintenance of power equipment</li>
+      <li>Energy consumption forecasting and anomaly detection</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Hydrogen and Fuel Cell Technologies</h3>
+    <ul>
+      <li>Power electronics for fuel cell integration</li>
+      <li>Green hydrogen generation via electrolysis</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block">
+  <h2 class="domain-title">Artificial Intelligence and Machine Learning for Energy</h2>
+
+  <div class="subtopic">
+    <h3>Energy Demand Forecasting Using Machine Learning</h3>
+    <ul>
+      <li>Short-term and long-term load prediction</li>
+      <li>Seasonal energy usage trends analysis</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Fault Detection and Predictive Maintenance</h3>
+    <ul>
+      <li>ML models for anomaly detection in power systems</li>
+      <li>Predicting equipment failure in smart grids or solar plants</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Energy Optimization with Reinforcement Learning</h3>
+    <ul>
+      <li>Smart grid control and load balancing</li>
+      <li>Real-time power dispatch and scheduling</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>AI for Smart Building Energy Management</h3>
+    <ul>
+      <li>HVAC and lighting control using neural networks</li>
+      <li>Occupancy-based energy optimization</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block">
+  <h2 class="domain-title">Cloud Computing and IoT for Energy Efficiency</h2>
+
+  <div class="subtopic">
+    <h3>IoT-based Smart Energy Monitoring Systems</h3>
+    <ul>
+      <li>Real-time power consumption tracking</li>
+      <li>Edge computing for energy data processing</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Energy-Efficient Cloud Data Centers</h3>
+    <ul>
+      <li>Virtual machine migration for energy saving</li>
+      <li>Workload scheduling based on renewable availability</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Blockchain for Energy Transactions</h3>
+    <ul>
+      <li>Peer-to-peer energy trading in microgrids</li>
+      <li>Secure energy usage and billing systems</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block">
+  <h2 class="domain-title">Data Science and Analytics in Energy</h2>
+
+  <div class="subtopic">
+    <h3>Big Data Analytics for Renewable Energy</h3>
+    <ul>
+      <li>Analysis of solar and wind power generation patterns</li>
+      <li>Weather-based forecasting for energy production</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Energy Consumption Behavior Analytics</h3>
+    <ul>
+      <li>User profiling and demand response strategies</li>
+      <li>Gamification for energy-saving awareness</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Carbon Footprint Tracking Tools</h3>
+    <ul>
+      <li>Algorithms for estimating and reducing carbon emissions</li>
+      <li>Visualization dashboards for sustainability KPIs</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block">
+  <h2 class="domain-title">Software Systems and Simulation</h2>
+
+  <div class="subtopic">
+    <h3>Simulation Tools for Energy-Efficient Systems</h3>
+    <ul>
+      <li>Smart grid simulators with real-time constraints</li>
+      <li>Modeling renewable energy systems with software</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Energy-Aware Software Development</h3>
+    <ul>
+      <li>Green coding practices and tools</li>
+      <li>Software energy profiling and optimization</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Mobile Apps for Energy Conservation</h3>
+    <ul>
+      <li>Personal energy usage trackers</li>
+      <li>IoT-based remote control apps for appliances</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block" style="visibility: hidden;">
+  <h2 class="domain-title"></h2>
+
+  <div class="subtopic">
+    <h3></h3>
+    <ul style="list-style: none;">
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3></h3>
+    <ul style="list-style: none;">
+      <li></li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block">
+  <h2 class="domain-title">Smart Mobility and Transport Systems</h2>
+
+  <div class="subtopic">
+    <h3>Routing Algorithms for Electric Vehicles</h3>
+    <ul>
+      <li>Energy-efficient path planning with charging station awareness</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>EV Fleet Management Using AI</h3>
+    <ul>
+      <li>Optimizing charging and dispatch schedules</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="domain-block">
+  <h2 class="domain-title">Cybersecurity and Privacy in Energy Systems</h2>
+
+  <div class="subtopic">
+    <h3>Security in Smart Grids</h3>
+    <ul>
+      <li>Intrusion detection systems for SCADA/ICS networks</li>
+      <li>Secure communication for smart meters and IoT devices</li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3>Privacy-Preserving Energy Data Sharing</h3>
+    <ul>
+      <li>Differential privacy for user energy data</li>
+      <li>Federated learning in smart energy systems</li>
+    </ul>
+  </div>
+</div>
+
+<div class="domain-block" style="visibility: hidden;">
+  <h2 class="domain-title"></h2>
+
+  <div class="subtopic">
+    <h3></h3>
+    <ul style="list-style: none;">
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="subtopic">
+    <h3></h3>
+    <ul style="list-style: none;">
+      <li></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+	
+	<!-- <div class="program-divider col-md-12 col-sm-12"></div>
 	
 	
 	<div class="container subhead1 " id="subhead">
@@ -205,7 +1039,7 @@
 				<li>	Electro-chemistry and Battery materials design</li>
 				<li>	Advances in Battery Technologies for Electric Vehicles </li>
 				<li>	Safety aspects of Battery Management System</li>
-				<!-- <li>	Waste management and recycling of batteries</li> -->
+				<li>	Waste management and recycling of batteries</li> 
 				<li>	Internal Combustion Engines for HEVs, etc.,</li> 
 			</ul>
 		</p>
@@ -232,7 +1066,7 @@
 					<li>	Wireless Charging Technologies</li>
 					<li>	Navigation systems for Autonomous Vehicles</li>
 					<li>	Data and ‘Intelligent’ Design</li>
-				<!--	<li>	Machine Learning, etc.,</li>  -->
+					<li>	Machine Learning, etc.,</li>  
 				</ul</li>
 					</p>
 				</div>
@@ -249,7 +1083,7 @@
 					</p>
 				</div>
 		</div>
-	</div>
+	</div> -->
 </section>
 
 
@@ -269,7 +1103,7 @@
 					•	Font : Times new Roman, Size : 12 <br>
 					•	Not exceeding six pages <br>
 					•	In Electronic PDF format  <br>
-					•	Mail @<a href="mailto:step2021@svce.ac.in">  step2021@svce.ac.in </a> <br>
+					•	Mail @<a href="mailto:icsees@svce.ac.in">icsees@svce.ac.in </a> <br>
 				</h4>
 				<!-- <h4>You can download the sample confrence paper format here.</h4>
 				<a  href="./Conference Paper Format.doc" class="btn btn-danger top-pad">DOWNLOAD NOW</a> -->
@@ -384,14 +1218,14 @@
     					</div>
    						<div id="collapseThree" class="panel-collapse collapse address " role="tabpanel" aria-labelledby="headingThree">
       						<div class="panel-body addresstext">
-                            	<h3> Coordinator, STEP- 2021,</h3>
-								<h3>EEE Department,</h3>
+                            	<h3>Coordinator, STEP- 2026,</h3>
+								<h3>IT Department,</h3>
 								<h3>Sri Venkateswara College of Engineering, </h3>
 								<h3>Pennalur, Sriperumbudur - 602117 </h3>
 								<h3>Phone No: 044-27152000, Extn-251,264 </h3>
 								<h3>Cell No: 9790889777, 7598121751, 
 									7871422330, 9865861067, 9789452512</h3>
-								<h3>E-mail:  step2021@svce.ac.in</h3>
+								<h3>E-mail:  icsees@svce.ac.in</h3>
       						</div>
    						 </div>
  					 </div>
@@ -442,20 +1276,19 @@ The selected extended papers after peer review will be considered for publicatio
 			<h2 class="text-center ">Save the Dates</h2>
 			<div class="wow fadeInLeft col-md-4 col-sm-4" data-wow-delay="0.3s">
 				<i class="fa fa-book"></i>
-				<h3><strike style="color:#F00;">January 05, 2021</strike></h3>
-				<h3>Extended to January 22, 2021</h3>
+				<h3>December 30, 2025</h3>
 				<p>Paper Submission Deadline</p>
 			</div>
 
 			<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
 				<i class="fa fa-check-circle"></i>
-				<h3>January 23, 2021</h3>
+				<h3>December 31, 2025</h3>
 				<p>Paper Acceptance Notification</p>
 			</div>
 
 			<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
 				<i class="fa fa-flag"></i>
-				<h3>January 24, 2021</h3>
+				<h3>January 2, 2026</h3>
 				<p>Submission of Final Paper</p>
 			</div>
 
@@ -764,7 +1597,7 @@ The selected extended papers after peer review will be considered for publicatio
 				<div class="contact_des">
 					<h3>REGISTER HERE</h3>
 					<!-- <p>Registration Fees and Payment details are given below.</p> -->
-					<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeoHMt9BZD127PfGO0V-81rEQ94QBbHnriA6lHbST2knLHcYA/viewform?usp=sf_link" class="btn btn-danger">Pre-Registration & Paper Submission</a>
+					<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdzPu5keRE5DGIDAowO-Y7wum9IY0lIOwMcw7p_ofpvJA0FjQ/viewform?usp=header" class="btn btn-danger">Pre-Registration & Paper Submission</a>
 				</div>
 			</div>
 
@@ -788,7 +1621,7 @@ The selected extended papers after peer review will be considered for publicatio
 						<h3>Phone No: 044-27152000, Extn-251,264 </h3>
 						<h3>Cell No: 9790889777, 7598121751, 
 							7871422330, 9865861067, 9789452512</h3>
-						<h3>E-mail:  step2021@svce.ac.in</h3>
+						<h3>E-mail:  icsees@svce.ac.in</h3>
 					</div>
 					
 				</div>
@@ -841,14 +1674,21 @@ The selected extended papers after peer review will be considered for publicatio
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
-				<p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; 2020 SVCE EEE 
+				<p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; 2025 SVCE IT 
                     
-                    | Design: AEEE
 
-				<ul class="social-icon">
-					<li><a href="https://www.instagram.com/svceofficial/?hl=en" class="fa fa-instagram wow fadeInUp" data-wow-delay="1s"></a></li>
-					<li><a href="https://www.svce.ac.in/" class="fa fa-chrome wow fadeInUp" data-wow-delay="1.3s"></a></li>
-				</ul>
+<ul class="social-icons">
+  <li>
+    <a href="https://www.instagram.com/svceofficial/?hl=en" target="_blank" title="Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.svce.ac.in/" target="_blank" title="Website">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Website" class="icon">
+    </a>
+  </li>
+</ul>
 
 			</div>
 			
@@ -871,6 +1711,11 @@ The selected extended papers after peer review will be considered for publicatio
 <script src="js/smoothscroll.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
-
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
