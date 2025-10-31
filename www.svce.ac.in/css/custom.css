@@ -540,6 +540,40 @@ color: rgb(29, 68, 158);
   margin-top: 6px;
 }
 
+/* Section styling */
+#sponsors {
+    padding: 60px 0;
+    background: #f9f9f9; 
+    text-align: center; /* centers text like section title */
+}
+
+/* Section title styling */
+#sponsors .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Sponsor image container */
+#sponsors .sponsor-image {
+    display: flex;
+    justify-content: center; /* centers the image horizontally */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Sponsor image itself */
+.sponsor-image img {
+  height: 220px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.sponsor-image img:hover {
+    transform: scale(1.05);
+}
 
 
 .social-icons {
