@@ -366,32 +366,31 @@ color: rgb(29, 68, 158);
 }
 
 
-
 .PS {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  background-color: #f0f2f5;
 }
 
 .domain-block {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
-  transition: transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .domain-block:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .domain-title {
   font-size: 1.5rem;
-  color: #222;
+  color: #0077b6;
   margin-bottom: 1rem;
-  border-left: 5px solid #0077b6;
+  border-left: 4px solid #00b4d8;
   padding-left: 0.5rem;
 }
 
@@ -402,38 +401,146 @@ color: rgb(29, 68, 158);
 .subtopic h3 {
   font-size: 1.1rem;
   margin-bottom: 0.4rem;
-  color: #444;
+  color: #023e8a;
 }
 
-.subtopic ul {
-  padding-left: 1.2rem;
-  list-style: disc;
+.subtopic-list {
+  list-style: disc inside;
   margin: 0;
+  padding-left: 1rem;
 }
 
-.subtopic ul li {
+.subtopic-list li {
   margin-bottom: 0.3rem;
-  color: #333;
   font-size: 0.95rem;
+  color: #03045e;
 }
 
 @media (max-width: 480px) {
-  .PS {
+  .domain-block {
     padding: 1rem;
   }
-
   .domain-title {
     font-size: 1.3rem;
   }
-
   .subtopic h3 {
     font-size: 1rem;
   }
-
-  .subtopic ul li {
+  .subtopic-list li {
     font-size: 0.9rem;
   }
 }
+/* Tabs */
+.nav-tabs {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.nav-tabs li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-tabs a {
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs a:hover,
+.nav-tabs .active a {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Committee Member Card (modern domain-style theme) */
+.committee-member {
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.committee-member:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Font sizes by position */
+.committee-member.largest .member-name { font-size: 1.9rem; }
+.committee-member.largest .member-role { font-size: 1.25rem; }
+
+.committee-member.large .member-name { font-size: 1.6rem; }
+.committee-member.large .member-role { font-size: 1.05rem; }
+
+.committee-member.medium .member-name { font-size: 1.35rem; }
+.committee-member.medium .member-role { font-size: 1rem; }
+
+.committee-member.small .member-name { font-size: 1.15rem; }
+.committee-member.small .member-role { font-size: 0.9rem; }
+
+.committee-member.smallest .member-name { font-size: 1rem; }
+.committee-member.smallest .member-role { font-size: 0.85rem; }
+
+.member-name {
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #1a1a1a;
+}
+
+.member-role {
+  margin: 0;
+  color: #666;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .committee-member {
+    padding: 12px 15px;
+  }
+  .committee-member.largest .member-name { font-size: 1.6rem; }
+  .committee-member.large .member-name { font-size: 1.4rem; }
+  .committee-member.medium .member-name { font-size: 1.2rem; }
+  .committee-member.small .member-name { font-size: 1rem; }
+  .committee-member.smallest .member-name { font-size: 0.9rem; }
+}
+
+/* Mobile Dropdown for Organising Committee */
+.section-dropdown {
+  width: 100%;
+  padding: 12px 18px;
+  font-weight: 700;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.section-dropdown:hover {
+  background-color: #ececec;
+}
+
+.members-container {
+  padding-left: 12px;
+  margin-top: 6px;
+}
+
+
 
 .social-icons {
   list-style: none;
