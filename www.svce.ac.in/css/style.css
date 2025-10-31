@@ -63,18 +63,21 @@ a {
   margin-bottom: 32px;
 }
 
-#overview,
 #register {
   padding-top: 14rem;
   padding-bottom: 14rem;
 }
 
-#detail, #video,
+#detail,
 #speakers, 
 #program,
 #sponsors, 
 #contact, footer {
     padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#video {
     padding-bottom: 10rem;
 }
 

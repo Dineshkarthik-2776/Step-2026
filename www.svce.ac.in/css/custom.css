@@ -18,50 +18,59 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-	  padding-top: 10px;
-      padding-left: 20px;
-	  padding-right: 20px;
+      padding: 10px 20px;
     }
 
-    .col-1 img {
-      height: 60px;
+    /* Logo Styles */
+    .col-1{
+      flex: 0 0 120px;
+      display: flex;
+      align-items: center;
+    }
+
+    .col-1 {
+      justify-content: flex-start;
+    }
+
+    .col-3 {
+      justify-content: flex-end;
+    }
+
+    .logo {
+      width: auto;
+      height: 45px;
+      object-fit: contain;
+      margin: 4px 0;
     }
 
     .col-2 {
       flex: 1;
       text-align: center;
       padding: 0 10px;
-	  color: white;
+      color: white;
     }
 
     .col-2 p {
       font-size: 1em;
-      line-height: 1;
-	  color: white;
+      line-height: 1.2;
+      color: white;
+      margin: 4px 0;
     }
 
     .col-2 .title {
-      font-size: 1.1em;
+      font-size: 1.2em;
       font-weight: bold;
+      margin-bottom: 5px;
     }
-
-    .col-3 {
-      display: flex;
-      justify-content: flex-end;
-    }
-
+    
     .hamburger {
-      font-size: 28px;
+      font-size: 24px;
       background: none;
       border: none;
       color: white;
       cursor: pointer;
+      padding: 5px;
       display: none;
-    }
-
-    .aicte-logo {
-      height: 60px;
-      margin-left: 10px;
     }
 
     .header-main nav ul {
@@ -116,6 +125,9 @@ header {
         padding: 10px 15px;
       }
 
+      #aicte-logo-mb { display: none; }
+      #aicte-logo-lg { margin-right: 2rem; }
+
       .aicte-logo {
         display: inline-block;
       }
@@ -123,16 +135,40 @@ header {
 
     /* Mobile Only */
     @media (max-width: 768px) {
-      .col-2 p {
-        font-size: 0.75em;
+      .header-top {
+        padding: 8px 15px;
       }
+
+      .col-1 {
+        flex: 0 0 80px;
+      }
+
+      .logo-stack {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+      }
+
+      .logo {
+        width: 100%;
+        height: auto;
+        max-height: 40px;
+      }
+
+      .col-2 p {
+        font-size: 0.65em;
+      }
+
+      .col-2 .title {
+        font-size: 0.85em;
+      }
+
+      #aicte-logo-lg { display: none; }
+      #aicte-logo-mb { display: block; }
 
       .hamburger {
         display: block;
-      }
 
-      .aicte-logo {
-        display: none;
       }
     }
 
@@ -262,7 +298,7 @@ color: rgb(29, 68, 158);
 }
 
 .overview-section {
-  padding: 50px 20px;
+  padding: 4rem 1rem;
   background-color: #ffffff;
   color: #333;
   font-family: 'Poppins', sans-serif;
@@ -324,6 +360,12 @@ color: rgb(29, 68, 158);
   height: auto;
 }
 }
+
+.container {
+  margin-bottom: 4rem;
+}
+
+
 
 .PS {
   display: grid;

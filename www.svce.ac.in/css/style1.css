@@ -42,13 +42,6 @@ scrollbar-width: none;  /* Firefox */
     letter-spacing: 2px;
 }
 
-#overview{
-    padding-top: 20rem;
-}
-#video{ 
-    padding-top: 12rem;
-}
-
 .authorguide h4{
     line-height: 28px;
     font-size: 18px;
@@ -252,11 +245,6 @@ scrollbar-width: none;  /* Firefox */
     }
     #intro img{
         padding-top: 10px;
-    }
-    
-    #overview {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
     }
 
     #video {
