@@ -61,7 +61,10 @@
         {
           "name": "Ms.R.Saktheeswari",
           "role": "AP/IT"
-        }
+        },
+        {"name": "Mr. V.Ranjith", "role": "AP/IT"},
+        {"name": "Dr. K.Suresh", "role": "Asso.Prof/IT"},
+        {"name": "Ms. M.Sugacini", "role": "AP/IT"}
       ]
     },
     {
@@ -97,11 +100,8 @@
             {"name": "Dr. A. Kala", "role": "Asso.Prof/IT"},
             {"name": "Dr. K. Kiruthika Devi", "role": "Asso.Prof/IT"},
             {"name": "Dr. P.Sharon Femi", "role": "Asso.Prof/IT"},
-            {"name": "Dr. K.Suresh", "role": "Asso.Prof/IT"},
             {"name": "Dr. A. Indumathi", "role": "Asso.Prof/IT"},
-            {"name": "Ms. N.Uma", "role": "AP/IT"},
-            {"name": "Ms. M.Sugacini", "role": "AP/IT"},
-            {"name": "Mr. V.Ranjith", "role": "AP/IT"}
+            {"name": "Ms. N.Uma", "role": "AP/IT"}
           ]
         },
         {
