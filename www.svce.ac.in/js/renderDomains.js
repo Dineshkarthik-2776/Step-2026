@@ -12,29 +12,33 @@ async function renderResearchDomains() {
     // Clear existing content
     container.innerHTML = '';
 
-    // Render each domain block
+    // Render each domain block with new styling
     data.researchDomains.forEach((domain) => {
       const domainBlock = document.createElement('div');
       domainBlock.className = 'domain-block';
-
-      // Add domain title
+      
+      // Domain title
       const title = document.createElement('h2');
       title.className = 'domain-title';
       title.textContent = domain.title;
       domainBlock.appendChild(title);
 
-      // Add subtopics
+      // Subtopics container
+      const subtopicsContainer = document.createElement('div');
+      subtopicsContainer.className = 'subtopics-container';
+
       domain.subtopics.forEach((subtopic) => {
         const subtopicDiv = document.createElement('div');
         subtopicDiv.className = 'subtopic';
 
-        // Add subtopic heading
+        // Subtopic heading
         const heading = document.createElement('h3');
         heading.textContent = subtopic.name;
         subtopicDiv.appendChild(heading);
 
-        // Add items list
+        // Subtopic items list
         const list = document.createElement('ul');
+        list.className = 'subtopic-list';
         subtopic.items.forEach((item) => {
           const listItem = document.createElement('li');
           listItem.textContent = item;
@@ -42,9 +46,10 @@ async function renderResearchDomains() {
         });
         subtopicDiv.appendChild(list);
 
-        domainBlock.appendChild(subtopicDiv);
+        subtopicsContainer.appendChild(subtopicDiv);
       });
 
+      domainBlock.appendChild(subtopicsContainer);
       container.appendChild(domainBlock);
     });
   } catch (error) {

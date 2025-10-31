@@ -366,32 +366,31 @@ color: rgb(29, 68, 158);
 }
 
 
-
 .PS {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  background-color: #f0f2f5;
 }
 
 .domain-block {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
-  transition: transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .domain-block:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .domain-title {
   font-size: 1.5rem;
-  color: #222;
+  color: #0077b6;
   margin-bottom: 1rem;
-  border-left: 5px solid #0077b6;
+  border-left: 4px solid #00b4d8;
   padding-left: 0.5rem;
 }
 
@@ -402,35 +401,32 @@ color: rgb(29, 68, 158);
 .subtopic h3 {
   font-size: 1.1rem;
   margin-bottom: 0.4rem;
-  color: #444;
+  color: #023e8a;
 }
 
-.subtopic ul {
-  padding-left: 1.2rem;
-  list-style: disc;
+.subtopic-list {
+  list-style: disc inside;
   margin: 0;
+  padding-left: 1rem;
 }
 
-.subtopic ul li {
+.subtopic-list li {
   margin-bottom: 0.3rem;
-  color: #333;
   font-size: 0.95rem;
+  color: #03045e;
 }
 
 @media (max-width: 480px) {
-  .PS {
+  .domain-block {
     padding: 1rem;
   }
-
   .domain-title {
     font-size: 1.3rem;
   }
-
   .subtopic h3 {
     font-size: 1rem;
   }
-
-  .subtopic ul li {
+  .subtopic-list li {
     font-size: 0.9rem;
   }
 }
