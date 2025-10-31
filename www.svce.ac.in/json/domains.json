@@ -237,6 +237,23 @@
       ]
     },
     {
+      "title": "Smart Mobility and Transport System",
+      "subtopics": [
+        {
+          "name": "Routing Algorithms for Electric Vehicles",
+          "items": [
+            "Energy-efficient path planning with chargin station awareness"
+          ]
+        },
+        {
+          "name": "EV Fleet Management Using AI",
+          "items": [
+            "Optimizing charging and dispatch schedules"
+          ]
+        }
+      ]
+    },
+    {
       "title": "Cybersecurity and Privacy in Energy Systems",
       "subtopics": [
         {
