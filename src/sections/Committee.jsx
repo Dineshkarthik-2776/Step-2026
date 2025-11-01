@@ -1,0 +1,70 @@
+import { useState } from 'react';
+import { committeeData } from '../data/data';
+
+function Committee() {
+  const [activeTab, setActiveTab] = useState(committeeData.committees[0].id);
+
+  return (
+    <section id="program" className="parallax-section">
+      <div className="container">
+        <div className="row">
+          <div className="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.6s">
+            <div className="section-title">
+              <h2>Committee</h2>
+            </div>
+          </div>
+
+          <div className="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.9s">
+            <ul className="nav nav-tabs" role="tablist">
+              {committeeData.committees.map((c) => (
+                <li key={c.id} className={c.id === activeTab ? 'active' : ''} onClick={() => setActiveTab(c.id)}>
+                  <a href={`#${c.id}`} aria-controls={c.id} role="tab">{c.title}</a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="tab-content">
+              {committeeData.committees.map((committee) => (
+                <div key={committee.id} id={committee.id} className={`tab-pane ${committee.id === activeTab ? 'active' : ''}`} role="tabpanel">
+                  {committee.sections ? (
+                    <div className="row">
+                      {committee.sections.map((section, secIndex) => (
+                        <div key={secIndex} className="col-lg-6 col-md-12 mb-4">
+                          <h4 className="section-title">{section.title}</h4>
+                          {section.members.map((member, i) => (
+                            <div key={i} className="committee-member small">
+                              <h5 className="member-name">{member.name}</h5>
+                              <p className="member-role">{member.role}</p>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="row">
+                      {committee.members && committee.members.map((member, idx) => (
+                        <div key={idx} className="col-lg-6 col-md-12 mb-3">
+                          <div className={`committee-member ${getSizeClass(committee.id)}`}>
+                            <h3 className="member-name">{member.name}</h3>
+                            <p className="member-role">{member.role}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+  function getSizeClass(id) {
+    const map = { fday: 'largest', sday: 'large', tday: 'medium', uday: 'small', xday: 'smallest' };
+    return map[id] || 'small';
+  }
+}
+
+export default Committee;

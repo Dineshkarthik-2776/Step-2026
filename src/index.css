@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-900 mb-8 text-center;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-blue-600 transition-colors duration-200;
+  }
+}
+
+/* Custom Preloader Animation */
+.sk-rotating-plane {
+  width: 40px;
+  height: 40px;
+  background-color: #3b82f6;
+  margin: auto;
+  animation: sk-rotating-plane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-rotating-plane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/* Custom Marquee Animation */
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
