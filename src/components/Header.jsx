@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import svceLogo from "../images/svce-logo.png";
+import aicteLogo from "../images/AICTE-logo.png";
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -8,8 +11,8 @@ function Header() {
       <div className="header-top">
         <div className="col-1">
           <div className="logo-stack">
-            <img className="logo svce-logo" src="www.svce.ac.in/images/svce-logo.png" alt="SVCE Logo" />
-            <img className="logo aicte-logo" id="aicte-logo-mb" src="www.svce.ac.in/images/AICTE-logo.png" alt="AICTE Logo" />
+            <img className="logo svce-logo" src={svceLogo} alt="SVCE Logo" />
+            <img className="logo aicte-logo" id="aicte-logo-mb" src={aicteLogo} alt="AICTE Logo" />
           </div>
         </div>
 
@@ -20,7 +23,7 @@ function Header() {
         </div>
 
         <div className="col-3">
-          <img className="logo aicte-logo" id="aicte-logo-lg" src="www.svce.ac.in/images/AICTE-logo.png" alt="AICTE Logo" />
+          <img className="logo aicte-logo" id="aicte-logo-lg" src={aicteLogo} alt="AICTE Logo" />
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
         </div>
       </div>

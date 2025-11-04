@@ -1,12 +1,14 @@
 import { researchDomains } from '../data/data';
 
+import bookImage from '../images/Books.svg';
+
 function ResearchDomains() {
   return (
     <section id="video" className="parallax-section">
       <div className="container">
         <div className="row">
           <div className="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="0.9s">
-            <img src="www.svce.ac.in/images/Books.svg" alt="Overview" />
+            <img src={bookImage} alt="Overview" />
           </div>
 
           <div className="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.3s">

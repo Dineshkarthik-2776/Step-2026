@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { animate } from 'framer-motion';
 
 export function useAnimation(elementRef, animationClass) {
   const { ref, inView } = useInView({

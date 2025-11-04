@@ -1,5 +1,3 @@
-import { color } from "framer-motion";
-
 function Home() {
   return (
     <section id="home" className="home-section">
