@@ -76,6 +76,14 @@ function Home() {
               Valedictory Function Invitation
             </a>
             &nbsp;&nbsp;&nbsp;
+            <a
+              href="https://aicte.gov.in/schemes/other-schemes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              AICTE SCHEMES
+            </a>
+            &nbsp;&nbsp;&nbsp;
           </div>
         </div>
 
