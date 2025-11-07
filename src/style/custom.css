@@ -8,7 +8,7 @@
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
-  animation: marqueeLeft 25s linear infinite;
+  animation: marqueeLeft 40s linear infinite;
 }
 
 .marquee-content a {
@@ -33,7 +33,7 @@
 }
 
 .bottom-marquee .marquee-content {
-  animation: marqueeRight 25s linear infinite;
+  animation: marqueeRight 40s linear infinite;
 }
 
 @keyframes marqueeLeft {
