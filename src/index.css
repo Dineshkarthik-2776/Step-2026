@@ -8,6 +8,11 @@
     font-family: 'Poppins', sans-serif;
   }
 
+  /* Prevent horizontal overflow on small viewports (fixes unwanted side-scrolling) */
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
     background-color: #f8fafc;
   }
@@ -18,18 +23,6 @@
 }
 
 @layer components {
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    padding-left: 1.5rem; /* px-6 */
-    padding-right: 1.5rem;
-    padding-top: 0.75rem; /* py-3 */
-    padding-bottom: 0.75rem;
-    border-radius: 0.5rem; /* rounded-lg */
-    font-weight: 500; /* font-medium */
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-duration: 200ms; /* duration-200 */
-  }
 
   .btn-primary {
     background-color: #2563eb; /* bg-blue-600 */
@@ -41,7 +34,7 @@
   }
 
   .btn-danger {
-    background-color: #dc2626; /* bg-red-600 */
+    background-color: #dd4141; /* bg-red-600 */
     color: #ffffff; /* text-white */
   }
 
