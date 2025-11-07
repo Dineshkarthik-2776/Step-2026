@@ -33,14 +33,6 @@ function About() {
                 The Department of EEE was started in the year 1994. The post graduate program (M.E) in Power Electronics and Drives was started in 2002. The department has secured permanent affiliation with Anna University and accredited by National Board of Accreditation for the third consecutive time for five years. The Department has well equipped state –of- the- art laboratories and recognized as a research centre by Anna University. The Department has well qualified and experienced faculty and staff members of proven ability and profound skills.
               </p>
             </div>
-
-            <div className="flex justify-center">
-              <img 
-                src="/images/dept1.jpg" 
-                alt="Department" 
-                className="rounded-lg shadow-lg max-w-md"
-              />
-            </div>
           </div>
         </div>
       </section>

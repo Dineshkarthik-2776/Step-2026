@@ -1,3 +1,5 @@
+import CsiLogo from '../images/csi_logo_india.png';
+
 function Sponsors() {
   return (
     <section id="sponsors" className="py-20">
@@ -10,10 +12,10 @@ function Sponsors() {
           </div>
 
           <div className="flex justify-center">
-            <img 
-              src="/images/csi_logo_india.png" 
-              alt="CSI India" 
-              className="max-w-sm"
+            <img
+              src={CsiLogo}
+              alt="CSI India"
+              className="h-[25vh] w-auto rounded-lg shadow-lg object-contain"
             />
           </div>
         </div>

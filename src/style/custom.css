@@ -97,3 +97,165 @@
                 transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); 
     } 
 }
+
+/* Section base */
+.author-section {
+  background-color: #f9fafb;
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid layout */
+.author-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Two columns on larger screens */
+@media (min-width: 1024px) {
+  .author-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Text Section */
+.author-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.paper-link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.paper-link a {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.paper-link a:hover {
+  color: #2563eb;
+}
+
+.guidelines {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.guidelines a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.guidelines a:hover {
+  text-decoration: underline;
+}
+
+/* Image Section */
+.author-image {
+  display: flex;
+  justify-content: center;
+}
+
+.author-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 55vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .author-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .paper-link {
+    font-size: 1.1rem;
+  }
+
+  .author-image img {
+    height: 45vh;
+  }
+}
+
+
+/* Section Base */
+.overview-section {
+  background-color: #f9fafb;
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Two columns on larger screens */
+@media (min-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Text Section */
+.overview-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.overview-text p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+/* Image Section */
+.overview-image {
+  display: flex;
+  justify-content: center;
+}
+
+.overview-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 55vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .overview-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .overview-image img {
+    height: 45vh;
+  }
+}
