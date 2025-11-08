@@ -1,51 +1,44 @@
-import AuthorImage from '../images/author.jpg';
-
 function AuthorGuidelines() {
   return (
-    <section id="author" className="author-section">
-      <section id="video" className="parallax-section authorguide">
-        <div className="container">
-          
-          <div className="author-grid">
-            
-            {/* Left Column: Text */}
-            <div className="author-text">
-              <h2>AUTHOR GUIDELINES</h2>
+    <section id="author">
+        <h2 className="author-title">AUTHOR GUIDELINES</h2>
+        <div className="title-underline"></div>
+      <div className="author-card">
+        {/* Title */}
 
-              <h4 className="paper-link">
-                <a
-                  href="/paper-format.docx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Paper Format:
-                </a>
-              </h4>
+        {/* Paper Link */}
+        <h4 className="paper-link">
+          <a
+            href="/paper-format.docx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Paper Format
+          </a>
+        </h4>
 
-              <div className="guidelines">
-                <p>• Single column</p>
-                <p>• Font : Times New Roman, Size : 12</p>
-                <p>• Not exceeding six pages</p>
-                <p>• In Electronic PDF format</p>
-                <p>
-                  • Mail @{' '}
-                  <a href="mailto:icsees@svce.ac.in">
-                    icsees@svce.ac.in
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            {/* Right Column: Image */}
-            <div className="author-image">
-              <img
-                src={AuthorImage}
-                alt="Author Guidelines"
-              />
-            </div>
-          </div>
+        {/* Guidelines */}
+        <div className="guidelines-container">
+          <ul className="guidelines-list">
+            <li>
+              <span className="bullet">•</span> Single column
+            </li>
+            <li>
+              <span className="bullet">•</span> Font: Times New Roman, Size: 12
+            </li>
+            <li>
+              <span className="bullet">•</span> Not exceeding six pages
+            </li>
+            <li>
+              <span className="bullet">•</span> In Electronic PDF format
+            </li>
+            <li>
+              <span className="bullet">•</span> Mail @{' '}
+              <a href="mailto:icsees@svce.ac.in">icsees@svce.ac.in</a>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
     </section>
   );
 }

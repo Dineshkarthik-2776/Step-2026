@@ -134,7 +134,7 @@
 }
 
 .paper-link {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #1e3a8a;
   margin-bottom: 1rem;
@@ -176,21 +176,6 @@
   height: 55vh;
   object-fit: cover;
   border-radius: 8px;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .author-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .paper-link {
-    font-size: 1.1rem;
-  }
-
-  .author-image img {
-    height: 45vh;
-  }
 }
 
 

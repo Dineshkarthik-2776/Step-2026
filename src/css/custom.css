@@ -658,3 +658,103 @@ color: rgb(29, 68, 158);
 .social-icons li a:hover .icon {
   transform: scale(1.2);
 }
+
+/* ===== Author Section ===== */
+#author {
+  background-color: #fff;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ===== Card ===== */
+.author-card {
+  background-color: #fff;
+  width: 90%;
+  max-width: 900px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 60px 50px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.author-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Title ===== */
+.author-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 0 auto 30px;
+  border-radius: 3px;
+}
+
+/* ===== Guidelines ===== */
+.guidelines-container {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.guidelines-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guidelines-list li {
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+}
+
+.guidelines-list .bullet {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-right: 10px;
+}
+
+.guidelines-list a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.guidelines-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #author {
+    padding: 70px 20px;
+  }
+
+  .author-card {
+    padding: 40px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .author-card {
+    padding: 30px 20px;
+  }
+}
