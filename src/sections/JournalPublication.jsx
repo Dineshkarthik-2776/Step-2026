@@ -4,27 +4,14 @@ function JournalPublication() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            JOURNAL PUBLICATIONS
+            PUBLICATIONS
           </h2>
 
           <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
             <div className="prose max-w-none">
               <h4 className="text-gray-700 leading-relaxed">
-                The selected extended papers after peer review will be considered for publication in Anna University listed Annexure journal, Scopus indexed journals, Web of Science & UGC approved Journals. The publication will be considered as per the Journal norms. (Plagiarism policy and Journal Publication charges)
+                The conference proceedings will be Indexed in AIP conference . The indexing will be done as per norms of plagiarism policy and AIP proceedings publication charges.
               </h4>
-
-              <h5 className="font-bold mt-4">
-                * Publication will be considered as per the Journal norms. (Plagiarism policy and Journal Publication charges)
-              </h5>
-
-              <h3 className="mt-6">
-                <a 
-                  href="./images/List-of-Journals.pdf"
-                  className="text-blue-600 hover:text-blue-800 transition-colors"
-                >
-                  Click the list of Journals
-                </a>
-              </h3>
 
               <div className="mt-8">
                 <h4 className="text-gray-700">
