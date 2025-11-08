@@ -341,7 +341,6 @@ export const committeeData = {
         { "name": "Dr. S. Arul Daniel", "role": "Professor (HAG), Department of EEE, NIT Trichy" },
         { "name": "Dr. Karthik Pattabiraman", "role": "Professor, Electrical and Computer Engineering, University of British Columbia, Canada" },
         { "name": "Dr. Anup Kumar Panda", "role": "Professor and Head, Department of Electrical Engineering, NIT Rourkela" },
-        { "name": "Dr. Ashwani Kumar", "role": "Professor, Electrical Engineering, School of Renewable Energy and Efficiency, NIT Kurukshetra, Haryana, India" },
         { "name": "Dr. Ar. Arvind", "role": "DGM Project Planning, Ashok Leyland, Chennai" },
         { "name": "Dr. C. Aravind Vaithilingam", "role": "Professor, Taylor’s University" },
         { "name": "Dr. Ranjan Kumar Behera", "role": "Associate Professor, Department of EEE, IIT Patna, India" },
@@ -351,7 +350,8 @@ export const committeeData = {
         { "name": "Dr. S. Nanda Kumar", "role": "Deputy Manager, Grid Corporation of India, Chennai" },
         { "name": "Dr. R. Ramesh", "role": "Professor, Department of EEE, College of Engineering Guindy, Anna University" },
         { "name": "Dr. K. Prathibanandhi", "role": "Department of EEE, Sri Sairam Engineering College" },
-        { "name": "Dr. Narottam Das", "role": "Senior Lecturer - Engineering (Electrical), School of Engineering and Technology, Centre for Intelligent Systems, Central Queensland University, Australia" }
+        { "name": "Dr. Narottam Das", "role": "Senior Lecturer - Engineering (Electrical), School of Engineering and Technology, Centre for Intelligent Systems, Central Queensland University, Australia" },
+        { "name": "Dr. Ashwani Kumar", "role": "Professor, Electrical Engineering, School of Renewable Energy and Efficiency, NIT Kurukshetra, Haryana, India" }
       ]
     },
     {
