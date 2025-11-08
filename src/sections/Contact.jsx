@@ -23,29 +23,22 @@ function Contact() {
       </section>
 
       {/* Contact Details */}
-      <section id="contact_1" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Address for Communication
-            </h2>
+      <section id="contact_1">
+        <div className="contact-container">
+          <div className="contact-wrapper">
+            <h2 className="contact-title">Address for Communication</h2>
 
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <div className="space-y-3 text-gray-700">
-                <h3>Coordinator, ICSEES - 2026,</h3>
-                <h3>IT Department,</h3>
-                <h3>Sri Venkateswara College of Engineering,</h3>
+            <div className="contact-card">
+              <div className="contact-info">
+                <h3>Coordinator, ICSEES - 2026</h3>
+                <h3>IT Department</h3>
+                <h3>Sri Venkateswara College of Engineering</h3>
                 <h3>Pennalur, Sriperumbudur - 602117</h3>
-                <h3>Phone No: 044-27152000, Extn-251,264</h3>
-                <h3>Cell No: 9840956105,917010965461</h3>
+                <h3>Phone No: 044-27152000, Extn-251, 264</h3>
+                <h3>Cell No: 9840956105, 917010965461</h3>
                 <h3>
                   E-mail:{' '}
-                  <a 
-                    href="mailto:icsees@svce.ac.in"
-                    className="text-blue-600 hover:underline"
-                  >
-                    icsees@svce.ac.in
-                  </a>
+                  <a href="mailto:icsees@svce.ac.in">icsees@svce.ac.in</a>
                 </h3>
               </div>
             </div>

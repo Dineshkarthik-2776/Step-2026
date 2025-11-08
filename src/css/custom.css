@@ -758,3 +758,73 @@ color: rgb(29, 68, 158);
     padding: 30px 20px;
   }
 }
+
+/* ===== CONTACT SECTION (Simplified & Smaller) ===== */
+#contact_1 {
+  background-color: #f9fafb; /* light gray */
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  text-align: center;
+  width: 80%;
+  max-width: 700px; /* smaller than before */
+  margin: 0 auto;
+}
+
+/* ===== Title ===== */
+.contact-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+/* ===== Info ===== */
+
+.contact-info h3 {
+  color: #333;
+  font-size: 1.25rem; /* smaller text */
+  line-height: 1.6;
+  margin-bottom: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #contact_1 {
+    padding: 40px 20px;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.4rem;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+  }
+}
