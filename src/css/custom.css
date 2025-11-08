@@ -828,3 +828,68 @@ color: rgb(29, 68, 158);
     font-size: 0.85rem;
   }
 }
+
+/* ===== SPONSORS SECTION ===== */
+#sponsors {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+/* ===== Container ===== */
+.sponsors-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Content Wrapper ===== */
+.sponsors-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== Heading ===== */
+.sponsors-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+/* ===== Sponsor Logo ===== */
+.sponsors-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors-logo img {
+  height: 15vh; /* same as original */
+  width: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  #sponsors {
+    padding: 60px 0;
+  }
+
+  .sponsors-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .sponsors-logo img {
+    height: 15vh;
+  }
+}
