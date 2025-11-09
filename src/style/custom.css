@@ -1,14 +1,17 @@
-/* Marquee functionality with original link styling */
+/* ========== Marquee Base Styles ========== */
 .marquee-container {
   width: 100%;
   overflow: hidden;
   padding: 10px 0;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
   animation: marqueeLeft 40s linear infinite;
+  font-size: 1rem; /* Keep original size */
 }
 
 .marquee-content a {
@@ -24,7 +27,6 @@
   border-image: initial;
   padding: 5px 10px;
   border-radius: 5px;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -32,10 +34,12 @@
   background: #f8f8f8;
 }
 
-.bottom-marquee .marquee-content {
+/* ========== Bottom Marquee Animation ========== */
+.bottom-marquee {
   animation: marqueeRight 40s linear infinite;
 }
 
+/* ========== Keyframes ========== */
 @keyframes marqueeLeft {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
@@ -46,7 +50,74 @@
   100% { transform: translateX(100%); }
 }
 
-#text-red { color: red; }
+/* ========== Typography ========== */
+#text-red {
+  color: red;
+}
+
+/* ========== Responsive Section ========== */
+@media (max-width: 1024px) {
+  .home-content h1 { font-size: 2rem; }
+  .home-content h2 { font-size: 1.6rem; }
+  .home-content h3 { font-size: 1.3rem; }
+}
+
+@media (max-width: 768px) {
+  .marquee-container {
+    padding: 8px 0;
+  }
+
+  .marquee-content {
+    animation-duration: 50s; /* slightly slower for readability */
+    font-size: 1rem; /* keep same size */
+  }
+
+  .marquee-content a {
+    margin-right: 12px;
+    padding: 5px 10px;
+  }
+
+  .home-content {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .home-buttons .btn {
+    flex: 1 1 45%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-content {
+    animation-duration: 60s; /* slower on mobile */
+    font-size: 1rem; /* do not shrink */
+  }
+
+  .marquee-content a {
+    padding: 6px 12px;
+    margin-right: 10px;
+  }
+
+  .home-content h1 { font-size: 1.45rem; }
+  .home-content h2 { font-size: 1.3rem; }
+  .home-content h3 { font-size: 1.25rem; }
+
+  .home-buttons .btn {
+    flex: 1 1 100%;
+    width: 90%;
+  }
+}
+
+
 
 /* Main page loading animation */
 
